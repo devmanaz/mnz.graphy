@@ -4,14 +4,33 @@ import { Menu, X, Camera, Film, ChevronDown, Mail, Instagram, Phone, Filter, Max
 import './App.css';
 
 const portfolioItems = [
-    { id: 1, category: 'Portraits', title: 'Soul Echoes', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80' },
-    { id: 2, category: 'Street', title: 'Neon Pulse', img: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80' },
-    { id: 3, category: 'Events', title: 'Golden Hour Vows', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80' },
-    { id: 4, category: 'Polaroids', title: 'Vintage Haze', img: 'https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=800&q=80' },
-    { id: 5, category: 'Creative', title: 'Lost in Motion', img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80' },
-    { id: 6, category: 'Portraits', title: 'Serene Gaze', img: 'https://images.unsplash.com/photo-1531746020798-e49527219efd?auto=format&fit=crop&w=800&q=80' },
-    { id: 7, category: 'Street', title: 'Rainy Nocturne', img: 'https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?auto=format&fit=crop&w=800&q=80' },
-    { id: 8, category: 'Events', title: 'Eternal Rhythm', img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80' },
+    // Portraits
+    { id: 1, category: 'Portraits', title: 'Classical dance', img: 'https://i.postimg.cc/PtkWjD9q/DSC09068-jpg.jpg' },
+    { id: 2, category: 'Portraits', title: 'Vogue', img: 'https://i.postimg.cc/BJMjhwHJ/IMG-1280-JPG.jpg' },
+    { id: 3, category: 'Portraits', title: 'Vogue', img: 'https://i.postimg.cc/qBTmmRH0/Chat-GPT-Image-Feb-7-2026-02-27-46-AM.png' },
+    { id: 4, category: 'Portraits', title: 'Classical dance', img: 'https://i.postimg.cc/D7HPjZq2/Chat-GPT-Image-Feb-7-2026-02-30-07-AM.png' },
+    { id: 5, category: 'Portraits', title: 'Traditional', img: 'https://i.postimg.cc/qBrT84mQ/Chat-GPT-Image-Feb-7-2026-02-41-53-AM.png' },
+    { id: 16, category: 'Portraits', title: 'Golden Light', img: 'https://images.unsplash.com/photo-1531746020798-e49527219efd?auto=format&fit=crop&w=800&q=80' },
+    { id: 17, category: 'Portraits', title: 'City Shadows', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80' },
+    { id: 18, category: 'Portraits', title: 'Ethereal', img: 'https://images.unsplash.com/photo-1534030347209-7147fd9e7f1a?auto=format&fit=crop&w=800&q=80' },
+    // Events
+    { id: 6, category: 'Events', title: 'NJ', img: 'https://i.postimg.cc/HpCwgMRs/P1151646-JPG.jpg' },
+    { id: 7, category: 'Events', title: 'Wedding', img: 'https://i.postimg.cc/JMHyTn08/51881df1-2c91-442f-8b35-647f66c53ca4-JPG.jpg' },
+    { id: 8, category: 'Events', title: 'B day', img: 'https://i.postimg.cc/s3d2TCv7/Chat-GPT-Image-Feb-7-2026-02-20-41-AM.png' },
+    { id: 9, category: 'Events', title: 'Golden Hour Vows', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80' },
+    { id: 10, category: 'Events', title: 'Eternal Rhythm', img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80' },
+    { id: 19, category: 'Events', title: 'Celebration', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80' },
+    { id: 20, category: 'Events', title: 'Night Gala', img: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80' },
+    { id: 21, category: 'Events', title: 'Festival Lights', img: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&w=800&q=80' },
+    // Couples
+    { id: 11, category: 'Couples', title: 'Timeless Love', img: 'https://images.unsplash.com/photo-1516575150278-77136aed6920?auto=format&fit=crop&w=800&q=80' },
+    { id: 12, category: 'Couples', title: 'Together', img: 'https://images.unsplash.com/photo-1529636721158-ae5b2368b01d?auto=format&fit=crop&w=800&q=80' },
+    { id: 13, category: 'Couples', title: 'Endless Journey', img: 'https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&w=800&q=80' },
+    { id: 14, category: 'Couples', title: 'Romantic Getaway', img: 'https://images.unsplash.com/photo-1501901609772-df0848060b33?auto=format&fit=crop&w=800&q=80' },
+    { id: 15, category: 'Couples', title: 'Pure Joy', img: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80' },
+    { id: 22, category: 'Couples', title: 'Sunset Silhouette', img: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80' },
+    { id: 23, category: 'Couples', title: 'Holding Hands', img: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=800&q=80' },
+    { id: 24, category: 'Couples', title: 'Laughter', img: 'https://images.unsplash.com/photo-1621621667797-e06afc217fb0?auto=format&fit=crop&w=800&q=80' },
 ];
 
 const videoItems = [
@@ -87,9 +106,15 @@ const Hero = () => {
     return (
         <section id="home" className="hero">
             <div className="hero-video-container">
-                {/* Placeholder for video - in production use a real assets/hero.mp4 */}
                 <div className="hero-overlay"></div>
-                <div className="hero-placeholder-bg"></div>
+                <div className="hero-image-bg" style={{
+                    backgroundImage: 'url(https://i.postimg.cc/qpsM66b2/Chat-GPT-Image-Feb-7-2026-12-32-51-AM.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0.3
+                }}></div>
             </div>
 
             <div className="hero-content">
@@ -133,57 +158,48 @@ const Hero = () => {
 };
 
 const Portfolio = () => {
-    const [activeFilter, setActiveFilter] = useState('All');
-    const categories = ['All', 'Portraits', 'Events', 'Creative'];
-
-    const filteredItems = activeFilter === 'All'
-        ? portfolioItems
-        : portfolioItems.filter(item => item.category === activeFilter);
+    const categories = ['Portraits', 'Events', 'Couples'];
 
     return (
         <section id="portfolio" className="portfolio">
-            <div className="container">
+            <div className="container" style={{ maxWidth: '100%', padding: 0 }}>
                 <div className="section-header">
                     <h2 className="serif">Photography</h2>
-                    <div className="filter-tabs">
-                        {categories.map(category => (
-                            <button
-                                key={category}
-                                className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
-                                onClick={() => setActiveFilter(category)}
-                            >
-                                {category}
-                            </button>
-                        ))}
-                    </div>
                 </div>
 
-                <motion.div layout className="portfolio-grid">
-                    <AnimatePresence mode='popLayout'>
-                        {filteredItems.map((item) => (
-                            <motion.div
-                                layout
-                                key={item.id}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.4 }}
-                                className="portfolio-item"
-                            >
-                                <img src={item.img} alt={item.title} />
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-info">
-                                        <span className="category gold-text">{item.category}</span>
-                                        <h3>{item.title}</h3>
-                                    </div>
-                                    <div className="portfolio-icon">
-                                        <Maximize2 size={20} />
-                                    </div>
+                {categories.map(category => {
+                    const categoryItems = portfolioItems.filter(item => item.category === category);
+                    // Duplicate items for seamless marquee loop
+                    const marqueeItems = [...categoryItems, ...categoryItems];
+
+                    return (
+                        <div key={category} className="portfolio-section">
+                            <h3>{category}</h3>
+                            <div className="portfolio-scroller">
+                                <div className="scroller-track">
+                                    {marqueeItems.map((item, index) => (
+                                        <motion.div
+                                            key={`${item.id}-${index}`}
+                                            className="portfolio-item"
+                                            whileHover={{ scale: 0.98 }}
+                                        >
+                                            <img src={item.img} alt={item.title} />
+                                            <div className="portfolio-hover">
+                                                <div className="portfolio-info">
+                                                    <span className="category gold-text">{item.category}</span>
+                                                    <h3>{item.title}</h3>
+                                                </div>
+                                                <div className="portfolio-icon">
+                                                    <Maximize2 size={20} />
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    ))}
                                 </div>
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
-                </motion.div>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
@@ -437,7 +453,7 @@ const Footer = () => {
                     <div className="footer-logo serif">mnz.graphy</div>
                     <p className="footer-tagline">Capturing moments. Crafting stories.</p>
                     <div className="copyright">
-                        © 2026 mnz.graphy. All rights reserved.
+                        © 2024 mnz.graphy. All rights reserved.
                     </div>
                 </div>
             </div>
