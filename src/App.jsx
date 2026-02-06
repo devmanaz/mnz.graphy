@@ -10,27 +10,27 @@ const portfolioItems = [
     { id: 3, category: 'Portraits', title: 'Vogue', img: 'https://i.postimg.cc/qBTmmRH0/Chat-GPT-Image-Feb-7-2026-02-27-46-AM.png' },
     { id: 4, category: 'Portraits', title: 'Classical dance', img: 'https://i.postimg.cc/D7HPjZq2/Chat-GPT-Image-Feb-7-2026-02-30-07-AM.png' },
     { id: 5, category: 'Portraits', title: 'Traditional', img: 'https://i.postimg.cc/qBrT84mQ/Chat-GPT-Image-Feb-7-2026-02-41-53-AM.png' },
-    { id: 16, category: 'Portraits', title: 'Golden Light', img: 'https://images.unsplash.com/photo-1531746020798-e49527219efd?auto=format&fit=crop&w=800&q=80' },
-    { id: 17, category: 'Portraits', title: 'City Shadows', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80' },
-    { id: 18, category: 'Portraits', title: 'Ethereal', img: 'https://images.unsplash.com/photo-1534030347209-7147fd9e7f1a?auto=format&fit=crop&w=800&q=80' },
+    { id: 16, category: 'Portraits', title: 'Golden Light', img: 'https://i.pinimg.com/736x/5e/31/d5/5e31d56da0834a7f45f79be43e3df15e.jpg' },
+    { id: 17, category: 'Portraits', title: 'City Shadows', img: 'https://i.pinimg.com/736x/f1/39/00/f1390054fd4164d4024b325ae7fc1b82.jpg' },
+    { id: 18, category: 'Portraits', title: 'Ethereal', img: 'https://i.pinimg.com/736x/50/39/3b/50393b50e10cac06c62d19811e5b8d1f.jpg' },
     // Events
     { id: 6, category: 'Events', title: 'NJ', img: 'https://i.postimg.cc/HpCwgMRs/P1151646-JPG.jpg' },
     { id: 7, category: 'Events', title: 'Wedding', img: 'https://i.postimg.cc/JMHyTn08/51881df1-2c91-442f-8b35-647f66c53ca4-JPG.jpg' },
     { id: 8, category: 'Events', title: 'B day', img: 'https://i.postimg.cc/s3d2TCv7/Chat-GPT-Image-Feb-7-2026-02-20-41-AM.png' },
-    { id: 9, category: 'Events', title: 'Golden Hour Vows', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80' },
-    { id: 10, category: 'Events', title: 'Eternal Rhythm', img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80' },
+    { id: 9, category: 'Events', title: 'Golden Hour Vows', img: 'https://i.pinimg.com/1200x/2c/cd/12/2ccd123708291302dd7b6d14c9425a37.jpg' },
+    { id: 10, category: 'Events', title: 'Eternal Rhythm', img: 'https://i.pinimg.com/1200x/28/e9/af/28e9af9556a8c9d7c4af5899baa702fa.jpg' },
     { id: 19, category: 'Events', title: 'Celebration', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80' },
     { id: 20, category: 'Events', title: 'Night Gala', img: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80' },
     { id: 21, category: 'Events', title: 'Festival Lights', img: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&w=800&q=80' },
     // Couples
-    { id: 11, category: 'Couples', title: 'Timeless Love', img: 'https://images.unsplash.com/photo-1516575150278-77136aed6920?auto=format&fit=crop&w=800&q=80' },
-    { id: 12, category: 'Couples', title: 'Together', img: 'https://images.unsplash.com/photo-1529636721158-ae5b2368b01d?auto=format&fit=crop&w=800&q=80' },
-    { id: 13, category: 'Couples', title: 'Endless Journey', img: 'https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&w=800&q=80' },
-    { id: 14, category: 'Couples', title: 'Romantic Getaway', img: 'https://images.unsplash.com/photo-1501901609772-df0848060b33?auto=format&fit=crop&w=800&q=80' },
-    { id: 15, category: 'Couples', title: 'Pure Joy', img: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80' },
-    { id: 22, category: 'Couples', title: 'Sunset Silhouette', img: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80' },
-    { id: 23, category: 'Couples', title: 'Holding Hands', img: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=800&q=80' },
-    { id: 24, category: 'Couples', title: 'Laughter', img: 'https://images.unsplash.com/photo-1621621667797-e06afc217fb0?auto=format&fit=crop&w=800&q=80' },
+    { id: 11, category: 'Couples', title: 'Timeless Love', img: 'https://i.pinimg.com/736x/2b/83/19/2b8319af8cc0fcf852d00aa4c60b9c09.jpg' },
+    { id: 12, category: 'Couples', title: 'Together', img: 'https://i.pinimg.com/1200x/a4/50/48/a45048f5bc1e9f31585dc976cf60dbf7.jpg' },
+    { id: 13, category: 'Couples', title: 'Endless Journey', img: 'https://i.pinimg.com/736x/41/9f/b3/419fb3a91e02b5893cf52d0fb2b4a83a.jpg' },
+    { id: 14, category: 'Couples', title: 'Romantic Getaway', img: 'https://i.pinimg.com/1200x/8e/14/37/8e14379611ea4293800e3db0041c7f70.jpg' },
+    { id: 15, category: 'Couples', title: 'Pure Joy', img: 'https://i.pinimg.com/736x/78/80/e0/7880e0b343c588350b89324bc39619ef.jpg' },
+    { id: 22, category: 'Couples', title: 'Sunset Silhouette', img: 'https://i.pinimg.com/736x/e8/00/f9/e800f96580afa9c699edd44c2b71a889.jpg' },
+    { id: 23, category: 'Couples', title: 'Holding Hands', img: 'https://i.pinimg.com/736x/32/80/e6/3280e6442bf0c6f4515cc9632ee5e4fc.jpg' },
+    { id: 24, category: 'Couples', title: 'Laughter', img: 'https://i.pinimg.com/1200x/ec/20/99/ec2099a27e220a84e1d067dd9b6093d8.jpg' },
 ];
 
 const videoItems = [
@@ -186,7 +186,7 @@ const Portfolio = () => {
                                             <img src={item.img} alt={item.title} />
                                             <div className="portfolio-hover">
                                                 <div className="portfolio-info">
-                                                    <span className="category gold-text">{item.category}</span>
+                                                    <span className="category">{item.category}</span>
                                                     <h3>{item.title}</h3>
                                                 </div>
                                                 <div className="portfolio-icon">
@@ -293,7 +293,7 @@ const FeaturedWork = () => {
                     >
                         <img src={item.img} alt={item.title} />
                         <div className="featured-content">
-                            <span className="gold-text">{item.type}</span>
+                            <span className="category">{item.type}</span>
                             <h3>{item.title}</h3>
                         </div>
                     </motion.div>
@@ -343,8 +343,7 @@ const Services = () => {
         { title: 'Portrait Photography', icon: <Camera />, desc: 'Capturing the essence of your story in every frame.' },
         { title: 'Wedding Photography', icon: <Camera />, desc: 'Preserving your special day with timeless elegance and emotion.' },
         { title: 'Event Photography', icon: <Camera />, desc: 'Documenting life’s most precious moments as stay unfold.' },
-        { title: 'Cinematic Videography', icon: <Film />, desc: 'Motion stories with a cinematic, high-end touch.' },
-        { title: 'Reels & Short Films', icon: <Film />, desc: 'Engaging short-form content for brands and creatives.' },
+        { title: 'Cinematic Videography & Reels', icon: <Film />, desc: 'Motion stories, short films, and engaging content with a cinematic touch.' },
     ];
 
     return (
@@ -360,7 +359,7 @@ const Services = () => {
                             <div className="service-icon gold-text">{service.icon}</div>
                             <h3>{service.title}</h3>
                             <p>{service.desc}</p>
-                            <button className="service-link gold-text">Book Now</button>
+                            <button className="service-link">Book Now</button>
                         </div>
                     ))}
                 </div>

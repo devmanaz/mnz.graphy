@@ -201,6 +201,12 @@
     letter-spacing: 0.1em;
 }
 
+/* Hero Blend Effect */
+.hero {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
 .filter-tabs {
     display: flex;
     justify-content: center;
@@ -315,6 +321,8 @@
     padding: 20px;
     opacity: 0;
     transition: var(--transition-smooth);
+    color: #fff;
+    /* Ensure text is white */
 }
 
 .portfolio-item:hover img {
@@ -328,12 +336,16 @@
 .portfolio-info h3 {
     font-size: 1.2rem;
     margin-top: 5px;
+    font-weight: 700;
+    /* Bold title */
 }
 
 .category {
     font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    font-weight: 600;
+    /* Bold category */
 }
 
 .portfolio-icon {
@@ -524,6 +536,7 @@
     width: 100%;
     padding: 40px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
 }
 
 .featured-content h3 {
@@ -643,7 +656,7 @@
 
 /* Services Section */
 .services {
-    background: var(--bg-color);
+    background: transparent;
 }
 
 .section-subtitle {
@@ -659,22 +672,27 @@
 }
 
 .service-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 40px 30px;
     text-align: center;
     transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service-card:hover {
     border-color: var(--accent-gold);
     transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
 }
 
 .service-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
 .service-card h3 {
@@ -689,15 +707,28 @@
 }
 
 .service-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent-gold);
+    color: #fff;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.service-link:hover {
+    background: #fff;
+    color: #000;
 }
 
 /* Testimonials */
 .testimonials {
-    background: var(--bg-accent);
+    background: transparent;
 }
 
 .testimonials-carousel {
@@ -708,16 +739,24 @@
 
 .testimonial-card {
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
 }
 
 .quote-icon {
     font-size: 4rem;
     line-height: 1;
     font-family: var(--font-serif);
+    color: var(--accent-gold);
 }
 
 .quote {
@@ -730,6 +769,7 @@
 .stars {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: var(--accent-gold);
 }
 
 .client-info h4 {
