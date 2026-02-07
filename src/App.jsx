@@ -31,6 +31,15 @@ const portfolioItems = [
     { id: 22, category: 'Couples', title: 'Sunset Silhouette', img: 'https://i.pinimg.com/736x/e8/00/f9/e800f96580afa9c699edd44c2b71a889.jpg' },
     { id: 23, category: 'Couples', title: 'Holding Hands', img: 'https://i.pinimg.com/736x/32/80/e6/3280e6442bf0c6f4515cc9632ee5e4fc.jpg' },
     { id: 24, category: 'Couples', title: 'Laughter', img: 'https://i.pinimg.com/1200x/ec/20/99/ec2099a27e220a84e1d067dd9b6093d8.jpg' },
+    // Wedding
+    { id: 25, category: 'Wedding', title: 'Sacred Vows', img: 'https://i.pinimg.com/1200x/18/d8/95/18d895817e7539091807661266e76166.jpg' },
+    { id: 26, category: 'Wedding', title: 'Eternal Bond', img: 'https://i.pinimg.com/1200x/64/00/f5/6400f5767bdf881f8087dff75836484e.jpg' },
+    { id: 27, category: 'Wedding', title: 'Floral Walkway', img: 'https://i.pinimg.com/1200x/58/01/f9/5801f92e9f64bf870e60802f37a6b7e2.jpg' },
+    { id: 28, category: 'Wedding', title: 'Golden Hour Couple', img: 'https://i.pinimg.com/1200x/a1/3b/b1/a13bb1b585d85200259929255e28a504.jpg' },
+    { id: 29, category: 'Wedding', title: 'The Celebration', img: 'https://i.pinimg.com/1200x/66/83/88/66838855a499388a9143926e33fd776e.jpg' },
+    { id: 30, category: 'Wedding', title: 'Royal Portraits', img: 'https://i.pinimg.com/1200x/28/7f/f6/287ff61820688bf5186b896939a3f78e.jpg' },
+    { id: 31, category: 'Wedding', title: 'Bride Gaze', img: 'https://i.pinimg.com/736x/8a/80/f1/8a80f135863c3214c7fd69ba6bb2381f.jpg' },
+    { id: 32, category: 'Wedding', title: 'Mandap Vows', img: 'https://i.pinimg.com/736x/f0/30/f1/f030f131a90ee9247d69b360b6bbf20d.jpg' },
 ];
 
 const videoItems = [
@@ -57,7 +66,6 @@ const Navbar = () => {
         { name: 'Films', href: '#films' },
         { name: 'About', href: '#about' },
         { name: 'Services', href: '#services' },
-        { name: 'Contact', href: '#contact' },
     ];
 
     return (
@@ -69,6 +77,7 @@ const Navbar = () => {
                     {navLinks.map((link) => (
                         <a key={link.name} href={link.href} className="nav-link">{link.name}</a>
                     ))}
+                    <a href="#contact" className="btn-nav">Get in touch</a>
                 </div>
 
                 <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -95,6 +104,13 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
+                        <a
+                            href="#contact"
+                            className="mobile-link btn-nav-mobile"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Get in touch
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -113,37 +129,33 @@ const Hero = () => {
                     backgroundPosition: 'center',
                     width: '100%',
                     height: '100%',
-                    opacity: 0.3
+                    opacity: 1
                 }}></div>
             </div>
 
-            <div className="hero-content">
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="hero-title"
-                >
-                    mnz.graphy
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="hero-tagline"
-                >
-                    Capturing moments. <span className="gold-text italic">Crafting stories.</span>
-                </motion.p>
+            <div className="hero-content cinematic">
+                <div className="hero-title-wrapper">
+                    <motion.h1
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="hero-title-massive"
+                    >
+                        Mnz<br />Graphy
+                    </motion.h1>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="hero-ctas"
-                >
-                    <a href="#portfolio" className="btn-primary">View Portfolio</a>
-                    <a href="#contact" className="btn-secondary">Book a Shoot</a>
-                </motion.div>
+                <div className="hero-sidebar">
+                    <motion.p
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="hero-description"
+                    >
+                        HEY THERE! <br />
+                        <span className="italic">Turning moments into memories.</span>
+                    </motion.p>
+                </div>
             </div>
 
             <motion.div
@@ -157,53 +169,6 @@ const Hero = () => {
     );
 };
 
-const Portfolio = () => {
-    const categories = ['Portraits', 'Events', 'Couples'];
-
-    return (
-        <section id="portfolio" className="portfolio">
-            <div className="container" style={{ maxWidth: '100%', padding: 0 }}>
-                <div className="section-header">
-                    <h2 className="serif">Photography</h2>
-                </div>
-
-                {categories.map(category => {
-                    const categoryItems = portfolioItems.filter(item => item.category === category);
-                    // Duplicate items for seamless marquee loop
-                    const marqueeItems = [...categoryItems, ...categoryItems];
-
-                    return (
-                        <div key={category} className="portfolio-section">
-                            <h3>{category}</h3>
-                            <div className="portfolio-scroller">
-                                <div className="scroller-track">
-                                    {marqueeItems.map((item, index) => (
-                                        <motion.div
-                                            key={`${item.id}-${index}`}
-                                            className="portfolio-item"
-                                            whileHover={{ scale: 0.98 }}
-                                        >
-                                            <img src={item.img} alt={item.title} />
-                                            <div className="portfolio-hover">
-                                                <div className="portfolio-info">
-                                                    <span className="category">{item.category}</span>
-                                                    <h3>{item.title}</h3>
-                                                </div>
-                                                <div className="portfolio-icon">
-                                                    <Maximize2 size={20} />
-                                                </div>
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-        </section>
-    );
-};
 
 const Films = () => {
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -400,6 +365,83 @@ const Testimonials = () => {
                         </motion.div>
                     ))}
                 </div>
+            </div>
+        </section>
+    );
+};
+
+const Portfolio = () => {
+    const categories = ['All', 'Portraits', 'Events', 'Couples', 'Wedding'];
+
+    const scrollToCategory = (id) => {
+        if (id === 'All') {
+            const element = document.getElementById('portfolio');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            return;
+        }
+        const element = document.getElementById(`cat-${id}`);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
+
+    return (
+        <section id="portfolio" className="portfolio">
+            <div className="container" style={{ maxWidth: '100%', padding: 0 }}>
+                <div className="section-header">
+                    <h2 className="serif">Photography</h2>
+                </div>
+
+                {/* Sub-Navbar for Photography Categories */}
+                <div className="portfolio-nav">
+                    {categories.map((cat) => (
+                        <motion.button
+                            key={cat}
+                            className="portfolio-nav-btn"
+                            whileHover={{ scale: 1.1, color: "var(--accent-gold)" }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => scrollToCategory(cat)}
+                        >
+                            {cat}
+                        </motion.button>
+                    ))}
+                </div>
+
+                {categories.slice(1).map((category, catIdx) => {
+                    const categoryItems = portfolioItems.filter(item => item.category === category);
+                    // Triple the items for long trails of scrolling
+                    const marqueeItems = [...categoryItems, ...categoryItems, ...categoryItems];
+
+                    return (
+                        <div key={category} id={`cat-${category}`} className="portfolio-marquee-section">
+                            <h3 className="marquee-label">{category}</h3>
+                            <div className="marquee-container">
+                                <motion.div
+                                    className="marquee-track"
+                                    animate={{
+                                        x: catIdx % 2 === 0 ? [0, -1000] : [-1000, 0]
+                                    }}
+                                    transition={{
+                                        duration: 30,
+                                        repeat: Infinity,
+                                        ease: "linear"
+                                    }}
+                                >
+                                    {marqueeItems.map((item, idx) => (
+                                        <div key={`${item.id}-${idx}`} className="marquee-item">
+                                            <img src={item.img} alt={item.title} />
+                                            <div className="marquee-info">
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </motion.div>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
