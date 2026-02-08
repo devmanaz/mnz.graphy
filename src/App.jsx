@@ -15,7 +15,7 @@ const portfolioItems = [
     { id: 18, category: 'Portraits', title: 'Ethereal', img: 'https://i.pinimg.com/736x/50/39/3b/50393b50e10cac06c62d19811e5b8d1f.jpg' },
     // Events
     { id: 6, category: 'Events', title: 'NJ', img: 'https://i.postimg.cc/HpCwgMRs/P1151646-JPG.jpg' },
-    { id: 7, category: 'Events', title: 'Wedding', img: 'https://i.postimg.cc/JMHyTn08/51881df1-2c91-442f-8b35-647f66c53ca4-JPG.jpg' },
+    { id: 7, category: 'Events', title: 'Wedding', img: 'https://i.pinimg.com/736x/2e/e2/3c/2ee23c4e8ca1adb03d02f828f5bf30fa.jpg' },
     { id: 8, category: 'Events', title: 'B day', img: 'https://i.postimg.cc/s3d2TCv7/Chat-GPT-Image-Feb-7-2026-02-20-41-AM.png' },
     { id: 9, category: 'Events', title: 'Golden Hour Vows', img: 'https://i.pinimg.com/1200x/2c/cd/12/2ccd123708291302dd7b6d14c9425a37.jpg' },
     { id: 10, category: 'Events', title: 'Eternal Rhythm', img: 'https://i.pinimg.com/1200x/28/e9/af/28e9af9556a8c9d7c4af5899baa702fa.jpg' },
@@ -32,7 +32,7 @@ const portfolioItems = [
     { id: 23, category: 'Couples', title: 'Holding Hands', img: 'https://i.pinimg.com/736x/32/80/e6/3280e6442bf0c6f4515cc9632ee5e4fc.jpg' },
     { id: 24, category: 'Couples', title: 'Laughter', img: 'https://i.pinimg.com/1200x/ec/20/99/ec2099a27e220a84e1d067dd9b6093d8.jpg' },
     // Wedding
-    { id: 25, category: 'Wedding', title: 'Sacred Vows', img: 'https://i.pinimg.com/1200x/18/d8/95/18d895817e7539091807661266e76166.jpg' },
+    { id: 25, category: 'Wedding', title: 'Aparna & Arjun', img: 'https://i.postimg.cc/JMHyTn08/51881df1-2c91-442f-8b35-647f66c53ca4-JPG.jpg' },
     { id: 26, category: 'Wedding', title: 'Eternal Bond', img: 'https://i.pinimg.com/1200x/64/00/f5/6400f5767bdf881f8087dff75836484e.jpg' },
     { id: 27, category: 'Wedding', title: 'Floral Walkway', img: 'https://i.pinimg.com/1200x/58/01/f9/5801f92e9f64bf870e60802f37a6b7e2.jpg' },
     { id: 28, category: 'Wedding', title: 'Golden Hour Couple', img: 'https://i.pinimg.com/1200x/a1/3b/b1/a13bb1b585d85200259929255e28a504.jpg' },
@@ -455,9 +455,9 @@ const Contact = () => {
                     <h2 className="serif">Let’s turn moments into <span className="gold-text italic">stories.</span></h2>
                     <p>Ready to capture something extraordinary? Reach out and let’s start crafting.</p>
                     <div className="social-links">
-                        <a href="#"><Instagram /></a>
-                        <a href="#"><Phone /></a>
-                        <a href="#"><Mail /></a>
+                        <a href="https://www.instagram.com/mnz.graphy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+                        <a href="tel:9074061051"><Phone /></a>
+                        <a href="mailto:mnzgraphy@gmail.com"><Mail /></a>
                     </div>
                 </div>
 
