@@ -108,6 +108,8 @@ section {
 .nav-link:hover {
     opacity: 1;
     color: var(--accent-gold);
+    transform: scale(1.05);
+    /* Zoom effect on hover */
 }
 
 .nav-link:hover::after {
@@ -183,6 +185,8 @@ section {
 
 .btn-nav:hover {
     background: #cc0000;
+    transform: scale(1.05);
+    /* Zoom effect */
 }
 
 .btn-nav-mobile {
@@ -435,7 +439,14 @@ section {
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    /* Enhanced zoom for images */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    /* Subtle zoom for the entire card */
+    z-index: 10;
 }
 
 .portfolio-item:hover .portfolio-hover {
@@ -608,6 +619,8 @@ section {
 
 .video-card:hover {
     border-color: var(--accent-gold);
+    transform: scale(1.02);
+    /* Zoom effect */
 }
 
 .video-thumb {
@@ -903,7 +916,8 @@ section {
 
 .service-card:hover {
     border-color: var(--accent-gold);
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.03);
+    /* Zoom + Lift */
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
 }
@@ -969,7 +983,8 @@ section {
 
 .testimonial-card:hover {
     border-color: var(--accent-gold);
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
+    /* Zoom + Lift */
 }
 
 .quote-icon {
@@ -1045,6 +1060,8 @@ section {
     background: var(--accent-gold);
     color: #000;
     border-color: var(--accent-gold);
+    transform: scale(1.15) rotate(5deg);
+    /* Zoom + Subtle rotate */
 }
 
 .contact-form {
